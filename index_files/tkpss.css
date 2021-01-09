@@ -244,7 +244,7 @@ a, a:hover, a:active, a:focus {
 /* footer */
 
 .footer {
-	background-image: url(_images/tin-eng-bottom.png);
+	background-image: url(/index_files/tin-eng-bottom.png);
 	width: 980px;
 	height: 90px;
 	font-size: 14px;
