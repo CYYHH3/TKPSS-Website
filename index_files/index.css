@@ -34,7 +34,7 @@
 /* wise sayings */
 
 .wisesayings {
-	background-image:url(_images/wise_sayings_bg.png);
+	background-image:url(/index_files/wise_sayings_bg.png);
 	height: 140px;
 	width: 240px;
 	position: relative;
@@ -80,7 +80,7 @@
 
 .content2 {
 	height: 460px;
-	background-image:url(_images/index-bg.png);
+	background-image:url(/index_files/index-bg.png);
 }
 
 .content2a {
