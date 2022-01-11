@@ -82,6 +82,12 @@ a {
 .newspic img {
     width: 80%;
 }
+.newspic a {
+    transition: 0.15s;
+}
+.newspic a:hover {
+    transition: 0.15s;
+}
 
 .middle-middle {
     width: 49%;
