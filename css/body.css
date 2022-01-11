@@ -81,6 +81,7 @@ a {
 }
 .newspic img {
     width: 80%;
+    border-radius: 10px;
 }
 .newspic a {
     transition: 0.15s;
