@@ -75,8 +75,12 @@ a {
 .middle-left {
     width: calc((100% - 49%) / 2);
 }
-.TKPSS-Updates {
-    width: 100%;
+.newspic {
+    text-align: center;
+    margin: 0 5px;
+}
+.newspic img {
+    width: 80%;
 }
 
 .middle-middle {
@@ -155,6 +159,9 @@ a {
         margin-top: 15px;
         width: 95%;
         order: 2;
+    }
+    .newspic {
+        margin: 15px 5px 0 5px;
     }
     .middle-middle {
         position: relative;

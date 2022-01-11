@@ -10,6 +10,7 @@ var importStyle = function importStyle(b){
     }
 };
 
+// Menu
 // Show Menu
 function Show_Menu() {
     $(".menu").slideDown("fast");
@@ -21,6 +22,24 @@ function Hide_Menu() {
     $(".menu").slideUp("fast");
     importStyle(".show-menu {display: initial;} .hide-menu {display: none;}")
 }
+
+// Middle-Left Newspic
+var newspicidx = 2;
+function changeNewspic() {
+
+	$("#newspic" + newspicidx).hide(500);
+
+	if (newspicidx == 1) {
+		newspicidx = 2;
+	} else {
+		newspicidx = 1;
+	}
+
+	$("#newspic" + newspicidx).show(500);
+
+	setTimeout("changeNewspic()", 10000);
+}
+changeNewspic();
 
 // Middle-Right Marquee
 $('.middle-right-marquee').marquee({
