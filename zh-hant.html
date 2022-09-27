@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="田家炳中學位于香港新界粉嶺，於一九九四年由田家炳基金會創立，創辦人田家炳博士乃本港傑出工業家，一向熱心興學，作育英才。本校創校以來，本著嚴謹的辦學精神，秉承「全人教育」的理想，竭力服務坊眾，培育莘莘學子。">
+    <title>田家炳中學</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/body.css">
+</head>
+<body>
+    <!-- Top -->
+    <div class="top">
+        <img class="top-outermost-img" src="./img/zh-hant/top/tin-eng-top_2021-2022_CHT.png" alt="tin-eng-top_2021-2022">
+        <div class="top-carousel carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/top/tin-eng-top-20.png" class="d-block w-100" alt="tin-eng-top-20">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-21.png" class="d-block w-100" alt="tin-eng-top-21">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-22.png" class="d-block w-100" alt="tin-eng-top-22">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-23.png" class="d-block w-100" alt="tin-eng-top-23">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-25.png" class="d-block w-100" alt="tin-eng-top-25">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-29.png" class="d-block w-100" alt="tin-eng-top-29">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-30.png" class="d-block w-100" alt="tin-eng-top-30">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-31.png" class="d-block w-100" alt="tin-eng-top-31">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-33.png" class="d-block w-100" alt="tin-eng-top-33">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-34.png" class="d-block w-100" alt="tin-eng-top-34">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-35.png" class="d-block w-100" alt="tin-eng-top-35">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-36.png" class="d-block w-100" alt="tin-eng-top-36">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/top/tin-eng-top-37.png" class="d-block w-100" alt="tin-eng-top-37">
+                </div>
+            </div>
+        </div>
+        <img src="./img/TKPSS-logo.jpg" alt="TKPSS Logo" class="TKPSS-logo">
+        <div class="top-links">
+            <button type="button" class="btn btn-sm btn-primary show-menu" onclick="Show_Menu()">
+                <div class="show-menu-inner">
+                    Tin Ka Ping Secondary School
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                    </svg>
+                </div>
+            </button>
+            <button type="button" class="btn btn-sm btn-primary hide-menu" onclick="Hide_Menu()">
+                <div class="hide-menu-inner">
+                    Tin Ka Ping Secondary School
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg>
+                </div>
+            </button>
+            <div class="btn-group btn-group-sm menu" role="group">
+                <a href="./" class="btn btn-primary">主頁</a>
+                <div class="btn-group btn-group-sm menu-dropdown" role="group">
+                    <button id="About-TKPSS" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">學校簡介</button>
+                    <ul class="dropdown-menu" aria-labelledby="About-TKPSS">
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-010_profile/010-010_profile.php" target="_blank">學校簡介</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-020_mission/010-020_mission.php" target="_blank">辦學宗旨</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-030_founder/010-030_founder.php" target="_blank">學校創辦人</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-050_management/010-050_management.php" target="_blank">法團校董會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-040_supervisor/010-040_supervisor.php" target="_blank">我們的校監</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-070_principal/010-070_principal.php" target="_blank">我們的校長</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-070_con-principal/010-070_con-principal.php" target="_blank">顧問校長</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-060_hon-principal/010-060_hon-principal.php" target="_blank">榮譽校長</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-080_curriculum/010-080_curriculum.php" target="_blank">開辦課程</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-090_calendar/010-090_calendar.php" target="_blank">校曆表</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-100_motto_song/010-100_motto_song.php" target="_blank">校訓及校歌</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-110_report/010-110_report.php" target="_blank">校管文件</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-120_campus/010-120_campus.php" target="_blank">校園生活</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-130_teaching/010-130_teaching.php" target="_blank">教師名單</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-140_staff/010-140_staff.php" target="_blank">職員名單</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-180_tender/010-180_tender.php" target="_blank">供應學校服務招標文件</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/010_about/010-110_report/010-110_report_listoftextbooks.php" target="_blank">教科書清單</a></li>
+                    </ul>
+                    <button id="Organisation" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">學校組織</button>
+                    <ul class="dropdown-menu" aria-labelledby="Organisation">
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-010_ac/020-010_ac.php" target="_blank">行政議會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-020_adc/020-020_adc.php" target="_blank">行政及發展委員會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-040_itu/020-040_itu.php" target="_blank">　>　資訊科技組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-050_csrsu/020-050_csrsu.php" target="_blank">　>　校園及特別室安全組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-060_ssu/020-060_ssu.php" target="_blank">　>　學生支援組（惡劣天氣）</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-150_ccpu/020-150_ccpu.php" target="_blank">　>　中華文化推廣組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-070_aac/020-070_aac.php" target="_blank">教務委員會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-090_jcsa/020-090_jcsa.php" target="_blank">學生事務聯席委員會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-100_sau/020-100_sau.php" target="_blank">　>　學生生活輔導組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-110_ccau/activity.html" target="_blank">　>　聯課活動組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-120_leu/020-120_leu.php" target="_blank">　>　生活教育組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-130_sltu/020-130_sltu.php" target="_blank">　>　普及領袖訓練組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-140_cgu/020-140_cgu.php" target="_blank">　>　職學輔導組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-160_spdu/020-160_spdu.php" target="_blank">教職員專業發展組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-030_ecpu/020-030_ecpu.php" target="_blank">　>　英語校園推廣組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-170_cmu/020-170_cmu.php" target="_blank">危機處理組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-175_ccltu/020-175_ccltu.php" target="_blank">建構與協作學與教組</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-180_pta/index.htm" target="_blank">家長教師會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-190_aa_2017/index.html" target="_blank">校友會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-200_su/student_union.html" target="_blank">學生會</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-210_sh/house.html" target="_blank">四社</a></li>
+                    </ul>
+                    <button id="Student-Achievement" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">榮譽榜</button>
+                    <ul class="dropdown-menu" aria-labelledby="Student-Achievement">
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/030_achievement/030-010_internal/030-010_internal.php" target="_blank">學生歷屆獲獎名單</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/030_achievement/030-020_external/030-020_external.php" target="_blank">校外獲獎</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/030_achievement/030-030_publicexam/030-030_publicexam03.php" target="_blank">公開試成續</a></li>
+                    </ul>
+                    <button id="School-Publications" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">校園刊物</button>
+                    <ul class="dropdown-menu" aria-labelledby="School-Publications">
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/pop-up/2020-2021/tkpss-booklet/School_Pamphlet_2020-21.pdf" target="_blank">學校簡介小冊子</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/040_publications/040-010_pingfong/040-010_pingfong.php" target="_blank">並放集</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/040_publications/040-020_greenfield/040-020_greenfield.php" target="_blank">校刊</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/020_organisation/020-180_pta/HTM04/m4.htm" target="_blank">家教會刊物</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/040_publications/040-040_wscripters/040-040_wscripters.php" target="_blank">Writing Scriptersr</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/040_publications/040-050_tinspiration/040-050_tinspiration.php" target="_blank">Tinspiration</a></li>
+                        <li><a class="dropdown-item" href="http://tkpss.edu.hk/v2/040_publications/040-060_rees/040-060_rees-login.php" target="_blank">REES</a></li>
+                    </ul>
+                    <button id="Photo-Gallery" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">校園照片</button>
+                    <ul class="dropdown-menu" aria-labelledby="Photo-Gallery">
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2020-2021" target="_blank">2020 - 2021</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2019-2020" target="_blank">2019 - 2020</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2018-2019" target="_blank">2018 - 2019</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2017-2018" target="_blank">2017 - 2018</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2016-2017" target="_blank">2016 - 2017</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2015-2016" target="_blank">2015 - 2016</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2014-2015" target="_blank">2014 - 2015</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2013-2014" target="_blank">2018 - 2019</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2012-2013" target="_blank">2012 - 2013</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2011-2012" target="_blank">2011 - 2012</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2010-2011" target="_blank">2010 - 2011</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2009-2010" target="_blank">2009 - 2010</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/2008-2009" target="_blank">2008 - 2009</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/album183" target="_blank">2007 - 2008</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/album39" target="_blank">2005 - 2006</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/album48" target="_blank">2004 - 2005</a></li>
+                        <li><a class="dropdown-item" href="http://web.tkpss.edu.hk/gallery/album47" target="_blank">2003 - 2004</a></li>
+                    </ul>
+                    <button id="Links" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">網上連結</button>
+                    <ul class="dropdown-menu" aria-labelledby="Links">
+                        <li><a class="dropdown-item" href="https://www.tinkaping.org" target="_blank">田家炳基金會</a></li>
+                        <li><a class="dropdown-item" href="https://tkpss.sams.edu.hk" target="_blank">網上校管系統</a></li>
+                        <li><a class="dropdown-item" href="https://eclass.tkpss.edu.hk" target="_blank">eClass 內聯網</a></li>
+                        <li><a class="dropdown-item" href="http://library.tkpss.edu.hk/Pages/Index.aspx" target="_blank">圖書館管理系統</a></li>
+                        <li><a class="dropdown-item" href="https://ndtkpss.wisenews.net/?gid=ndtkpss&user=ipaccess" target="_blank">慧科搜索</a></li>
+                        <li><a class="dropdown-item" href="https://tvnews.hkedcity.net" target="_blank">TV News</a></li>
+                        <li><a class="dropdown-item" href="https://www.hkdse.hkeaa.edu.hk" target="_blank">香港中學文憑考試</a></li>
+                        <li><a class="dropdown-item" href="https://www.bca.hkeaa.edu.hk" target="_blank">基本能力評估</a></li>
+                        <li><a class="dropdown-item" href="https://www.edb.gov.hk" target="_blank">教育局</a></li>
+                        <li><a class="dropdown-item" href="https://www.hkeaa.edu.hk" target="_blank">香港考試及評核局</a></li>
+                        <li><a class="dropdown-item" href="https://eservices.edb.gov.hk" target="_blank">教育局 - 電子化服務</a></li>
+                    </ul>
+                </div>
+                <a href="./" class="btn btn-primary">English Version</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle -->
+    <div class="middle">
+        <div class="middle-left">
+            <!--<img class="TKPSS-Updates" src="https://sdfsdf.dev/100x200.png,006699,white">-->
+            <div class="newspic">
+                <h3><u>田中快訊</u></h3>
+
+                <!-- Newspic 1 -->
+                <div id="newspic1" style="display: block;">
+                    <div>
+                        <a href="http://web.tkpss.edu.hk/gallery/20211126CCAS" target="_blank">
+                            <img src="./img/middle/left/DSC_0004.gif">
+                            <p>中華文化薪火相傳禮</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://web.tkpss.edu.hk/gallery/20210724" target="_blank">
+                            <img src="./img/middle/left/PhotobyYAN_07810.jpg">
+                            <p>第三十三屆香港特別行政區傑出學生選舉</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://youtu.be/l-Q-3cInx1s" target="_blank">
+                            <img src="./img/middle/left/Band1.gif">
+                            <p>管樂團合奏</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Newspic 2 -->
+                <div id="newspic2" style="display: none;">
+                    <div>
+                        <a href="http://tkpss.edu.hk/v2/newspic/2021-2022/2021-09-24_pta/2021-09-24_pta_intro.pdf" target="_blank">
+                            <img src="./img/middle/left/2021-09-24_pta_intro.jpg">
+                            <p>第二十屆家教會執行委員會候選內閣簡介</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://tkpss.edu.hk/v2/newspic/2021-2022/2021-09-24_pta/2021-09-24_pta_sample.pdf" target="_blank">
+                            <img src="./img/middle/left/2021-09-24_pta_sample.jpg">
+                            <p>第二十屆家教會執行委員會家長選票(樣本)</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://web.tkpss.edu.hk/gallery/2021-07-16_eng_musical_fame" target="_blank">
+                            <img src="./img/middle/left/2021-07-16_eng_musical_fame.gif">
+                            <p>English Musical - Fame</p>
+                        </a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="middle-middle">
+            <div class="middle-middle-top">
+                <div id="middel-carousel" class="middel-carousel carousel slide" data-bs-ride="carousel">
+                    <div class="middle-carousel-inner carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/middle/middle/awards/awards_146.jpg" class="d-block w-100" alt="awards_146">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_147.jpg" class="d-block w-100" alt="awards_147">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_148.jpg" class="d-block w-100" alt="awards_148">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_149.jpg" class="d-block w-100" alt="awards_149">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_150.jpg" class="d-block w-100" alt="awards_150">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_151.jpg" class="d-block w-100" alt="awards_151">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_152.jpg" class="d-block w-100" alt="awards_152">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_153.jpg" class="d-block w-100" alt="awards_153">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_154.jpg" class="d-block w-100" alt="awards_154">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_155.jpg" class="d-block w-100" alt="awards_155">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_156.jpg" class="d-block w-100" alt="awards_156">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_157.jpg" class="d-block w-100" alt="awards_157">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_158.jpg" class="d-block w-100" alt="awards_158">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_159.jpg" class="d-block w-100" alt="awards_159">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_160.jpg" class="d-block w-100" alt="awards_160">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_161.jpg" class="d-block w-100" alt="awards_161">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_162.jpg" class="d-block w-100" alt="awards_162">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_163.jpg" class="d-block w-100" alt="awards_163">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_164.jpg" class="d-block w-100" alt="awards_164">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_165.jpg" class="d-block w-100" alt="awards_165">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_166.jpg" class="d-block w-100" alt="awards_166">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_167.png" class="d-block w-100" alt="awards_167">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/middle/middle/awards/awards_168.png" class="d-block w-100" alt="awards_168">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#middel-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#middel-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="middle-middle-bottom">
+                <a href="https://tkpsshk.wpcomstaging.com" target="_blank">
+                    <img src="./img/zh-hant/middle/middle/c-icon_21-22.gif">
+                </a>
+                <a href="http://www.tkpss.edu.hk/tkpss360/index.html" target="_blank">
+                    <img src="./img/zh-hant/middle/middle/tkpss360_icon_v2.gif">
+                </a>
+            </div>
+        </div>
+        <div class="middle-right">
+            <div class="wise-sayings">
+                <div class="wise-sayings-text-outer">
+                    <div class="wise-sayings-text">
+                        <h5><i>Wise Sayings</i></h5>
+                    </div>
+                </div>
+                <div class="middle-right-marquee-outer">
+                    <div class="middle-right-marquee">
+                        <p>Shoot for the moon. Even if you miss, you'll land among the stars.</p>
+                        <p>Nothing is impossible to a willing heart.</p>
+                        <p>If you can dream it, you can do it.</p>
+                        <p>If you can imagine it, you can achieve it; if you can dream it, you can become it.</p>
+                        <p>Hope sees the invisible, feels the intangible and achieves the impossible.</p>
+                        <p>Your future depends on many things, but mostly on you.</p>
+                        <p>To succeed, we must first believe that we can.</p>
+                        <p>Speaking without thinking is shooting without aiming.</p>
+                        <p>Without goals, and plans to reach them, you are like a ship that has set sail with no destination.</p>
+                        <p>Knowledge is power.</p>
+                        <p>Teachers open the door, but you must enter by yourself.</p>
+                        <p>Doubt is the beginning, not the end. of wisdom.</p>
+                        <p>Logical reasoning brings you from A to B. Imagination brings you everywhere.</p>
+                        <p>The power of imagination makes us infinite.</p>
+                        <p>The man who does not read has no advantage over the man who cannot read.</p>
+                        <p>Politeness costs nothing and gains everything.</p>
+                        <p>Discipline is the bridge between goals and accomplishments.</p>
+                        <p>A heart filled with anger has no room for love.</p>
+                        <p>Wisdom in the mind is better than money in the hand.</p>
+                        <p>Good friends are like stars, you don't always see them but you know they're always there.</p>
+                        <p>The good life is one inspired by love and guided by knowledge.</p>
+                        <p>Love is the only force capable of transforming an enemy to a friend.</p>
+                        <p>In this life we cannot always do great things. But we can do small things with great love.</p>
+                        <p>The best and most beautiful things in life cannot be seen, not touched, but are felt in the heart.</p>
+                        <p>Great minds discuss ideas; average minds discuss events; small minds discuss people.</p>
+                        <p>Leadership is the special quality which enables people to stand up and pull the rest of us over the horizon.</p>
+                        <p>Love cures people – both the ones who give it and the ones who receive it.</p>
+                        <p>When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.</p>
+                        <p>Storms make trees take deeper roots.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-right-bottom">
+                <div class="nine-squares">
+                    <a href="https://www.tinkaping.org" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_founder_CHT.png" alt="Founder">
+                    </a>
+                    <a href="https://eclass.tkpss.edu.hk" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_eclass_CHT.png" alt="eClass">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/010_about/010-150_circulars/010-150_circulars-login.php" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_notices_CHT.png" alt="Circulars">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/020_organisation/020-180_pta/index.htm" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_parent_CHT.png" alt="Parent Teacher Association">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/040_publications/040-070_writing/index.html" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_writing_CHT.png" alt="Writing to Share">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/020_organisation/020-081_reading/index.htm" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_reading_CHT.png" alt="Reading for Pleasure">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/010_about/010-080_curriculum/010-080_curriculum.php" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_subject_CHT.png" alt="Subject Homepage">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/020_organisation/020-220_career/index.htm" target="_blank">
+                        <img src="./img/zh-hant/middle/right/main_career_CHT.png" alt="Career Guidance">
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/010_about/010-200_drtin/010-200_drtin.php" target="_blank">
+                        <img src="./img/zh-hant/middle/right/tkp_CHT.png" alt="Eternally Missed">
+                    </a>
+                    <a class="eClass-Parent-APP" href="https://parents.eclass.com.hk" target="_blank">
+                        <img src="./img/zh-hant/middle/right/eclass_ENG_.png" alt="eClass Parent APP">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="bottom">
+        <div class="info">
+            <p class="info-margine">
+                <strong>地址：</strong>香港新界粉嶺維翰路 1 號
+                <a href="https://goo.gl/maps/GqQJ7q2WYvpDQBbF6" target="_blank">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24" data-bs-toggle="tooltip" data-bs-placement="top" title="地圖">
+                        <path fill="currentColor" d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19C12,19 6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M20,19C20,21.21 16.42,23 12,23C7.58,23 4,21.21 4,19C4,17.71 5.22,16.56 7.11,15.83L7.75,16.74C6.67,17.19 6,17.81 6,18.5C6,19.88 8.69,21 12,21C15.31,21 18,19.88 18,18.5C18,17.81 17.33,17.19 16.25,16.74L16.89,15.83C18.78,16.56 20,17.71 20,19Z" />
+                    </svg>
+                </a>
+            </p>
+            <p class="info-margine"><strong>傳真：</strong>2673 7730</p>
+            <p class="info-margine"><strong>電話：</strong>2673 1778</p>
+            <p class="info-margine"><strong>電郵：</strong><a href="mailto:tkpss@web.tkpss.edu.hk">tkpss@web.tkpss.edu.hk</a></p>
+            <p><strong>內聯網：</strong><a href="https://eclass.tkpss.edu.hk" target="_blank">https://eclass.tkpss.edu.hk</a></p>
+        </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <!-- Toast 1 -->
+        <div id="toast-1" class="toast align-items-center" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <a href="http://tkpss.edu.hk/v2/pop-up/2021-2022/2021-12-10_1st_term_exam_cbs/1st_term_exam_cbs_v1_20211210.pdf" target="_blank">上學期考試跨境生名單</a>
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <!-- Toast 2 -->
+        <div id="toast-2" class="toast align-items-center" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+            <div class="toast-header">
+                <strong class="me-auto">升中資訊日錄影重溫</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <strong>重播鏈結：</strong><a href="https://youtu.be/YnA34vIhXb0" target="_blank">https://youtu.be/YnA34vIhXb0</a><br>
+                <div class="mt-2 pt-2 border-top">
+                    <a href="http://tkpss.edu.hk/v2/pop-up/2021-2022/2021-11-12/2021-11-12%20f1.pdf" target="_blank">
+                        <button type="button" class="btn btn-primary btn-sm">
+                            <svg style="width:22px;height:22px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M2 12H4V17H20V12H22V17C22 18.11 21.11 19 20 19H4C2.9 19 2 18.11 2 17V12M12 15L17.55 9.54L16.13 8.13L13 11.25V2H11V11.25L7.88 8.13L6.46 9.55L12 15Z" />
+                            </svg>
+                            中一自行分配學位申請表
+                        </button>
+                    </a>
+                    <a href="http://tkpss.edu.hk/v2/pop-up/2021-2022/2021-11-12/2021-11-12_new1.pdf" target="_blank">
+                        <button type="button" class="btn btn-primary btn-sm">
+                            <svg style="width:22px;height:22px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M2 12H4V17H20V12H22V17C22 18.11 21.11 19 20 19H4C2.9 19 2 18.11 2 17V12M12 15L17.55 9.54L16.13 8.13L13 11.25V2H11V11.25L7.88 8.13L6.46 9.55L12 15Z" />
+                            </svg>
+                            申請須知
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Toasts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/CYYHH3/CDN2@main/js/jQuery/v3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script async src="./js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+a {
+    text-decoration: none;
+}
+
+/* Top */
+.top-outermost-img {
+    width: 100%;
+}
+.top-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.TKPSS-logo {
+    display: none;
+}
+@media screen and (max-width: 560px) {
+    .top-outermost-img {
+        display: none;
+    }
+    .top-carousel {
+        display: none;
+    }
+    .TKPSS-logo {
+        display: initial;
+        width: 100%;
+    }
+}
+
+.top-links {
+    text-align: center;
+    background-color: #0d6efd;
+}
+.show-menu {
+    width: 100%;
+}
+.hide-menu {
+    display: none;
+    width: 100%;
+}
+.show-menu-inner, .hide-menu-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 425px) {
+    .show-menu-inner, .hide-menu-inner {
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 843px) {
+    .show-menu {
+        display: none;
+    }
+}
+@media screen and (max-width: 842px) {
+    .menu {
+        display: none;
+    }
+}
+
+/* Middle */
+.middle {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1600px;
+    margin-top: 15px;
+}
+
+.middle-left {
+    width: calc((100% - 49%) / 2);
+}
+.newspic {
+    text-align: center;
+    margin: 0 5px;
+}
+.newspic img {
+    width: 80%;
+    border-radius: 10px;
+}
+.newspic a {
+    transition: 0.15s;
+}
+.newspic a:hover {
+    transition: 0.15s;
+}
+
+.middle-middle {
+    width: 49%;
+}
+.middle-carousel-inner {
+    border-radius: 15px;
+    border: 7px solid #0d6efd;
+}
+.middle-middle-bottom {
+    text-align: center;
+}
+.middle-middle-bottom img {
+    width: 49%;
+    margin-top: 10px;
+}
+
+.middle-right {
+    width: calc((100% - 49%) / 2);
+}
+.wise-sayings-text-outer {
+    border-radius: 12px 12px 0 0;
+    margin: 0 5px;
+    padding: 5px 5px 0 5px;
+    background: #999fff;
+}
+.wise-sayings-text {
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    background: #c8def2;
+    padding: 2px 0;
+}
+.wise-sayings-text h5 {
+    margin: 0;
+}
+.middle-right-marquee-outer {
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    margin: 0 5px;
+    padding: 5px;
+    background: #999fff;
+}
+.middle-right-marquee {
+    border-radius: 0 0 8px 8px;
+    height: 200px;
+    overflow: hidden;
+    padding: 5px;
+    background: #c8def2;
+    color: #006699;
+}
+
+.nine-squares {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.nine-squares img {
+    margin-top: 10px;
+}
+.eClass-Parent-APP {
+    width: 95%;
+}
+.eClass-Parent-APP img {
+    width: 100%;
+}
+
+@media screen and (max-width: 560px) {
+    .middle {
+        flex-direction: column;
+    }
+    .middle-left {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 15px;
+        width: 95%;
+        order: 2;
+    }
+    .newspic {
+        margin: 15px 5px 0 5px;
+    }
+    .middle-middle {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        order: 1;
+    }
+    .middle-right {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 15px;
+        width: 95%;
+        order: 3;
+    }
+    .eClass-Parent-APP {
+        width: 35%;
+        order: 10;
+    }
+}
+@media screen and (max-width: 460px) {
+    .eClass-Parent-APP {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 368px) {
+    .eClass-Parent-APP {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 294px) {
+    .eClass-Parent-APP {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 221px) {
+    .eClass-Parent-APP {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 147px) {
+    .eClass-Parent-APP {
+        width: 95%;
+    }
+}
+
+/* Bottom */
+.bottom {
+    color: #fff;
+    border-top: 15px solid #fdae2d;
+    background-color: #206df9;
+    background-color: var(--bs-blue);
+    /*background-image: url("../img/tin-eng-bottom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    margin-top: 1rem;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.info a {
+    color: #9ee9f9;
+    /*color: #86e4f7;*/
+    transition: 0.15s;
+}
+.info a:hover {
+    color: #6ddff6;
+    /*color: #55d9f4;*/
+    transition: 0.15s;
+}
+@media screen and (min-width: 1128px) {
+    .info-margine {
+        margin-right: 2rem;
+    }
+}
