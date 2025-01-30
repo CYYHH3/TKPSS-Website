@@ -29,8 +29,18 @@ jobs:
 
     - name: Greet and List
       run: |
-        echo echo "Hello World!"
+        echo "Hello World!"
+        echo -e "\n"
+
         pwd
+        echo -e "\n"
+
         ls
+        echo -e "\n"
+
         cd ".github/workflows"
+        ls
+        echo -e "\n"
+
+        cd ../..
         ls
