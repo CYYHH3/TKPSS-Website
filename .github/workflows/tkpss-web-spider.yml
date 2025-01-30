@@ -20,6 +20,7 @@ jobs:
 
     # - name: Install dependencies
     #   run: |
+    #     cd ".github/workflows"
     #     python -m pip install --upgrade pip
     #     pip install -r requirements.txt
 
@@ -27,20 +28,28 @@ jobs:
     #   run: |
     #     python crawler.py
 
-    - name: Greet and List
+    # - name: Greet and List
+    #   run: |
+    #     echo "Hello World!"
+    #     echo -e "\n"
+
+    #     pwd
+    #     echo -e "\n"
+
+    #     ls
+    #     echo -e "\n"
+
+    #     cd ".github/workflows"
+    #     ls
+    #     echo -e "\n"
+
+    #     cd ../..
+    #     ls
+    
+    - name: CD and List
       run: |
-        echo "Hello World!"
-        echo -e "\n"
-
-        pwd
-        echo -e "\n"
-
-        ls
-        echo -e "\n"
-
         cd ".github/workflows"
         ls
-        echo -e "\n"
-
-        cd ../..
-        ls
+    
+    - name: List again
+      run: ls
