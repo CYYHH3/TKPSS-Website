@@ -10,5 +10,9 @@ def spider():
     # 在这里添加你的爬虫逻辑
     print(soup.title.string)
 
+    # 将爬取的内容保存到文件
+    with open("tkpss.html", 'w', encoding='utf-8') as file:
+        file.write(response.text)
+
 if __name__ == '__main__':
     spider()
