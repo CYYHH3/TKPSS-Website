@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def crawl():
-    url = 'tkpss.edu.hk'
+    url = 'http://tkpss.edu.hk'
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
 
