@@ -18,15 +18,19 @@ jobs:
       with:
         python-version: '3.12'  # 选择你需要的 Python 版本
 
-    # - name: Install dependencies
-    #   run: |
-    #     cd ".github/workflows"
-    #     python -m pip install --upgrade pip
-    #     pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        cd ".github/workflows"
+        python -m pip install --upgrade pip
+        pip install -r tkpss-web-spider.txt
 
-    # - name: Run Python Crawler
-    #   run: |
-    #     python crawler.py
+    - name: Run Python Spider
+      run: |
+        cd ".github/workflows"
+        python tkpss-web-spider.py
+
+    # - name: Git Push
+
 
     # - name: Greet and List
     #   run: |
@@ -46,10 +50,10 @@ jobs:
     #     cd ../..
     #     ls
     
-    - name: CD and List
-      run: |
-        cd ".github/workflows"
-        ls
+    # - name: CD and List
+    #   run: |
+    #     cd ".github/workflows"
+    #     ls
     
-    - name: List again
-      run: ls
+    # - name: List again
+    #   run: ls
