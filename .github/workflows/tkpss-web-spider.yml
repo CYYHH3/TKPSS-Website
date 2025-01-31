@@ -30,11 +30,22 @@ jobs:
 
     - name: Git Push
       run: |
+        # Configure git user
         git config --global user.name 'TKPSS Website Spider'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+        # Add changes to git
         git add origin/tkpss.html
-        git commit -m "Update data from spider on $(date +'%Y-%m-%d %H:%M:%S (%Z)')"
-        git push
+
+        # Check if there are changes to commit
+        if git diff-index --quiet HEAD; then
+          echo "No changes to commit."
+        else
+          # Commit changes with a timestamp
+          git commit -m "Update data from spider on $(date +'%Y-%m-%d %H:%M:%S (%Z)')"
+          # Push changes to the repository
+          git push
+        fi
 
 
     # - name: Greet and List
