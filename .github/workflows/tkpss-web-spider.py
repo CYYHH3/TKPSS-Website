@@ -1,4 +1,4 @@
-import requests
+import requests, os
 from bs4 import BeautifulSoup
 
 def spider():
@@ -11,7 +11,9 @@ def spider():
     print(soup.title.string)
 
     # 将爬取的内容保存到文件
-    with open("tkpss.html", 'w', encoding='utf-8') as file:
+    if not os.path.exists("origin"):
+        os.makedirs("origin")
+    with open("origin/tkpss.html", 'w', encoding='utf-8') as file:
         file.write(response.text)
 
 if __name__ == '__main__':
