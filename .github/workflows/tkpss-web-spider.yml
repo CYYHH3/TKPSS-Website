@@ -28,7 +28,9 @@ jobs:
       run: |
         python .github/workflows/tkpss-web-spider.py
 
-    - name: 5. Git Push
+    - name: 5. Git Push & Discord Notify
+      env:
+        DC_WEBHOOK: ${{ secrets.DC_WEBHOOK }}
       run: |
         # Configure git user
         git config --global user.name 'TKPSS Website Spider'
@@ -45,6 +47,21 @@ jobs:
           git commit -m "Update data from spider on $(date +'%Y-%m-%d %H:%M:%S (%Z)')"
           # Push changes to the repository
           git push
+
+          # Send a message to Discord
+          # 定义嵌入信息
+          read -r -d '' DC_CONTENT <<EOF
+          {
+            "embeds": [
+              {
+                "title": "Workflow Notification",
+                "description": "TKPSS Website Spider has updated the data."
+              }
+            ]
+          }
+          EOF
+          # 发送嵌入信息到 Discord Webhook
+          curl -H "Content-Type: application/json" -d "$DC_CONTENT" $DC_WEBHOOK
         fi
 
     - name: 6. Send Heartbeat Signal
