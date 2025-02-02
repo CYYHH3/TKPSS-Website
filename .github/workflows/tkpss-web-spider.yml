@@ -39,6 +39,18 @@ jobs:
         # Add changes to git
         git add origin/tkpss.html
 
+        # Prepare Discord message content
+        read -r -d '' DC_CONTENT <<EOF
+        {
+          "embeds": [
+            {
+              "title": "Workflow Notification",
+              "description": "TKPSS Website Spider has updated the data."
+            }
+          ]
+        }
+        EOF
+
         # Check if there are changes to commit
         if git diff-index --quiet HEAD; then
           echo "No changes to commit."
@@ -49,18 +61,6 @@ jobs:
           git push
 
           # Send a message to Discord
-          # 定义嵌入信息
-          read -r -d '' DC_CONTENT <<EOF
-          {
-            "embeds": [
-              {
-                "title": "Workflow Notification",
-                "description": "TKPSS Website Spider has updated the data."
-              }
-            ]
-          }
-          EOF
-          # 发送嵌入信息到 Discord Webhook
           curl -H "Content-Type: application/json" -d "$DC_CONTENT" $DC_WEBHOOK
         fi
 
