@@ -20,15 +20,15 @@ jobs:
 
     - name: 3. Install dependencies
       run: |
-        cd ".github/workflows"
+        cd ".github/scripts/tkpss-web-spider"
         python -m pip install --upgrade pip
-        pip install -r tkpss-web-spider.txt
+        pip install -r requirements.txt
 
     - name: 4. Run Python Spider
       run: |
-        python .github/workflows/tkpss-web-spider.py
+        python .github/scripts/tkpss-web-spider/tkpss-web-spider.py
 
-    - name: 5. Git Push & Discord Notify
+    - name: 5. Git push & Discord notify
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
@@ -49,11 +49,11 @@ jobs:
           git push
 
           # Send a message to Discord
-          DC_CONTENT=$(cat .github/workflows/tkpss-web-spider.json)
-          curl -H "Content-Type: application/json" -d "$DC_CONTENT" $DISCORD_WEBHOOK
+          DISCORD_WEBHOOK_MSG=$(cat .github/scripts/tkpss-web-spider/discord-webhook-msg.json)
+          curl -H "Content-Type: application/json" -d "$DISCORD_WEBHOOK_MSG" $DISCORD_WEBHOOK
         fi
 
-    - name: 6. Send Heartbeat Signal
+    - name: 6. Send heartbeat signal
       env:
         BETTERSTACK: ${{ secrets.BETTERSTACK }}
       run: |
