@@ -30,7 +30,7 @@ jobs:
 
     - name: 5. Git Push & Discord Notify
       env:
-        DC_WEBHOOK: ${{ secrets.DC_WEBHOOK }}
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
         # Configure git user
         git config --global user.name 'TKPSS Website Spider'
@@ -50,7 +50,7 @@ jobs:
 
           # Send a message to Discord
           DC_CONTENT=$(cat .github/workflows/tkpss-web-spider.json)
-          curl -H "Content-Type: application/json" -d "$DC_CONTENT" $DC_WEBHOOK
+          curl -H "Content-Type: application/json" -d "$DC_CONTENT" $DISCORD_WEBHOOK
         fi
 
     - name: 6. Send Heartbeat Signal
