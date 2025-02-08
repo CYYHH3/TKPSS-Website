@@ -1,0 +1,859 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>田家炳中學 Tin Ka Ping Secondary School</title>
+<link href="tkpss.css" rel="stylesheet" type="text/css">
+<script src="_ajax/jquery/jquery.js"></script>
+
+	<link href="index.css" rel="stylesheet" type="text/css">
+	<link href="_ajax/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+	<script src="_ajax/jquery-ui/ui/jquery-ui.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var topimg = [	"_images/tin-eng-top-51.png",
+				"_images/tin-eng-top-51.png",
+				"_images/tin-eng-top-50.png",
+				"_images/tin-eng-top-49.png",
+				"_images/tin-eng-top-48.png",
+				"_images/tin-eng-top-47.png",
+				"_images/tin-eng-top-46.png",
+				"_images/tin-eng-top-45.png",
+				"_images/tin-eng-top-44.png",
+				"_images/tin-eng-top-43.png",
+				"_images/tin-eng-top-42.png",
+				"_images/tin-eng-top-41.png",
+				"_images/tin-eng-top-40.png",
+				"_images/tin-eng-top-39.png",
+				"_images/tin-eng-top-38.png",
+				"_images/tin-eng-top-30.png",
+				"_images/tin-eng-top-20.png" ];
+
+function preloadTopImage() {
+	var cache = [];
+	for (var i = topimg.length; i--;) {
+		var cacheImage = document.createElement('img');
+		cacheImage.src = topimg[i];
+		cache.push(cacheImage);
+	}
+}
+
+var topimgidx = 0;
+function changeTopImage() {
+
+   //$("#topimgbox").fadeOut(2000, function(){
+   //  $(this).attr('src', topimg[topimgidx]).bind('onreadystatechange load', function(){
+   //	 if (this.complete) $(this).fadeIn(500);
+   // });
+   //});
+
+   $("#topimgbox").fadeOut(2000, function(){
+	  $(this).attr('src', topimg[topimgidx]).fadeIn(500);
+   });
+
+	if (topimgidx < (topimg.length-1)) {
+		topimgidx++;
+	} else {
+		topimgidx = 0;
+	}
+
+	setTimeout("changeTopImage()", 5000);
+}
+
+var newspicidx = 2;
+function changeNewspic() {
+
+	$("#newspic" + newspicidx).hide(500);
+
+	if (newspicidx == 1) {
+		newspicidx = 2;
+	} else {
+		newspicidx = 1;
+	}
+
+	$("#newspic" + newspicidx).show(500);
+
+	setTimeout("changeNewspic()", 10000);
+}
+
+$(document).ready(function (){
+// start banner images
+	preloadTopImage();
+	changeTopImage();
+
+// start news pic
+	changeNewspic();
+
+// create the mask to top images
+$("#topimgmask").css('top', $("#header").position().top);
+$("#topimgmask").css('left', $("#header").position().left);
+
+$(window).on('resize', function() {
+	$("#topimgmask").css('top', $("#header").position().top);
+	$("#topimgmask").css('left', $("#header").position().left);
+});
+
+$('.menubar li').hover(
+	// When mouse enters the menu element
+	function () {
+		//Fade in the submenu
+		$('ul', this).fadeIn(); // fadeIn will show the sub cat menu
+	},
+	// When mouse leaves the menu element
+	function () {
+		//Fade out the submenu
+		$('ul', this).fadeOut(); // fadeOut will hide the sub cat menu
+	}
+);
+
+
+
+});
+</script>
+
+<div class="topimgmask" id="topimgmask">
+	<img src="_images/tin-eng-top_2022-2023.png" alt="Banner" width="980" height="160">
+</div>
+
+<div class="container">
+  <div class="header" id="header"><img src="_images/tin-eng-top-34.png" alt="Banner" name="topimgbox" width="980" height="160" id="topimgbox">
+    <!-- end .header --></div>
+  <div class="clearfloat"></div>
+  <div class="menubarpad">
+    <ul class="menubar">
+      <li><a href="index.php">．Home</a></li>
+      <li><a href="#">．About TKPSS</a>
+          <ul class="m_about">
+            <li><a href="010_about/010-010_profile/010-010_profile.php">．Profile</a></li>
+            <li><a href="010_about/010-020_mission/010-020_mission.php">．School Mission</a></li>
+            <li><a href="010_about/010-030_founder/010-030_founder.php">．The School Founder</a></li>
+            <li><a href="010_about/010-050_management/010-050_management.php">．Incorporated Management Committee</a></li>
+            <li><a href="010_about/010-040_supervisor/010-040_supervisor.php">．School Supervisor</a></li>
+            <li><a href="010_about/010-070_principal/010-070_principal.php">．Principal</a></li>
+            <li><a href="010_about/010-070_con-principal/010-070_con-principal.php">．Consulting Principal</a></li>
+            <li><a href="010_about/010-060_hon-principal/010-060_hon-principal.php">．Honorary Principal</a></li>
+            <li><a href="010_about/010-080_curriculum/010-080_curriculum.php">．Curriculum</a></li>
+            <li><a href="010_about/010-090_calendar/010-090_calendar.php">．School Calendar</a></li>
+            <li><a href="010_about/010-100_motto_song/010-100_motto_song.php">．School Motto and School Song</a></li>
+            <li><a href="010_about/010-110_report/010-110_report.php">．School Plans, Reports and Some Policies</a></li>
+            <li><a href="010_about/010-120_campus/010-120_campus.php">．Campus Life</a></li>
+            <li><a href="010_about/010-130_teaching/010-130_teaching.php">．Class Teachers</a></li>
+            <li><a href="010_about/010-140_staff/010-140_staff.php">．Administrative and Supporting Staff</a></li>
+            <li><a href="010_about/010-180_tender/010-180_tender.php">．Tender Documents for school services</a></li>
+            <li><a href="010_about/010-110_report/010-110_report_listoftextbooks.php">．List of Textbooks</a></li>
+          </ul><div class="clearfloat"></div>
+	  </li>
+      <li><a href="#">．Organisation</a>
+          <ul class="m_organisation">
+            <li><a href="020_organisation/020-010_ac/020-010_ac.php">．Administrative Council</a></li>
+            <li><a href="020_organisation/020-020_adc/020-020_adc.php">．Administration and Development Committee</a></li>
+            <li><a href="020_organisation/020-040_itu/020-040_itu.php">　　> Information Technology Unit</a></li>
+            <li><a href="020_organisation/020-050_csrsu/020-050_csrsu.php">　　> Campus and Special Room Safety Unit</a></li>
+            <li><a href="020_organisation/020-060_ssu/020-060_ssu.php">　　> Student Support Unit  (Adverse Weather)</a></li>
+            <li><a href="020_organisation/020-150_ccpu/020-150_ccpu.php">　　> Chinese Culture Promotion Unit</a></li>
+            <li><a href="020_organisation/020-070_aac/020-070_aac.php">．Academic Affairs Committee</a></li>
+			<li><a href="020_organisation/020-230_rp/020-230_rp.php">　　> Reading Promotion Unit</a></li>
+            <li><a href="020_organisation/020-090_jcsa/020-090_jcsa.php">．Joint Committee on Student Affairs</a></li>
+            <li><a href="020_organisation/020-100_sau/020-100_sau.php">　　> Student Affairs Unit</a></li>
+            <li><a href="020_organisation/020-110_ccau/activity.html" target="_blank">　　> Co-curricular Activities Unit</a></li>
+            <li><a href="020_organisation/020-120_leu/020-120_leu.php">　　> Life Education Unit</a></li>
+            <li><a href="020_organisation/020-130_sltu/020-130_sltu.php">　　> Student Leaders Training Unit</a></li>
+            <li><a href="020_organisation/020-140_cgu/020-140_cgu.php">　　> Careers Guidance Unit</a></li>
+            <li><a href="020_organisation/020-160_spdu/020-160_spdu.php">．Staff Professional Development Unit</a></li>
+            <li><a href="020_organisation/020-030_ecpu/020-030_ecpu.php">　　> English Campus Promotion Unit</a></li>
+            <li><a href="020_organisation/020-170_cmu/020-170_cmu.php">．Crisis Management Unit</a></li>
+			<li><a href="020_organisation/020-175_ccltu/020-175_ccltu.php">．Constructivist and Cooperative Learning & Teaching Unit</a></li>
+            <li><a href="020_organisation/020-180_pta/index.htm" target="_blank">．Parent Teacher Association</a></li>
+            <li><a href="020_organisation/020-190_aa_2017/index.html" target="_blank">．Alumni Association</a></li>
+            <li><a href="020_organisation/020-200_su/student_union.html" target="_blank">．Student Union</a></li>
+            <li><a href="020_organisation/020-210_sh/house.html" target="_blank">．School House</a></li>
+          </ul><div class="clearfloat"></div>
+      </li>
+      <li><a href="#">．Student Achievement</a>
+          <ul class="m_achievement">
+            <li><a href="030_achievement/030-010_internal/030-010_internal.php">．Internal Awards</a></li>
+            <li><a href="030_achievement/030-020_external/030-020_external.php">．External Competitions and Awards</a></li>
+            <li><a href="030_achievement/030-030_publicexam/030-030_publicexam04.php">．Public Exam Results</a></li>
+          </ul><div class="clearfloat"></div>
+	  </li>
+      <li><a href="#">．School Publications</a>
+          <ul class="m_publications">
+		    <li><a href="pop-up/2022-2023/2022-09-26_tkp/2022-09-26_tkp_s.pdf" target="_blank">．田老田中田蹤</a></li>
+			<li><a href="pop-up/2023-2024/2023-11-30_tkpssbooklet/highweb.pdf" target="_blank">．School Pamphlet</a></li>
+            <li><a href="040_publications/040-010_pingfong/040-010_pingfong.php">．Ping Fong Collection</a></li>
+            <li><a href="040_publications/040-020_greenfield/040-020_greenfield.php">．The Green Field</a></li>
+        <!--<li><a href="040_publications/040-030_tkppost/040-030_tkppost.php">．TKP Post</a></li>-->
+            <li><a href="020_organisation/020-180_pta/HTM04/m4.htm" target="_blank">．PTA Newsletter</a></li>
+            <li><a href="040_publications/040-040_wscripters/040-040_wscripters.php">．Writing Scripters</a></li>
+            <li><a href="040_publications/040-050_tinspiration/040-050_tinspiration.php">．Tinspiration</a></li>
+            <li><a href="040_publications/040-060_rees/040-060_rees-login.php">．REES</a></li>
+          </ul><div class="clearfloat"></div>
+	  </li>
+      <li><a href="#">．Photo Gallery</a>
+          <ul class="m_gallery">
+            <li><a href="http://web.tkpss.edu.hk/gallery/2024-2025" target="_blank">．2024 - 2025</a></li>
+		    <li><a href="http://web.tkpss.edu.hk/gallery/2023-2024" target="_blank">．2023 - 2024</a></li>
+			<li><a href="http://web.tkpss.edu.hk/gallery/2022-2023" target="_blank">．2022 - 2023</a></li>
+			<li><a href="http://web.tkpss.edu.hk/gallery/2021-2022" target="_blank">．2021 - 2022</a></li>
+			<li><a href="http://web.tkpss.edu.hk/gallery/2020-2021" target="_blank">．2020 - 2021</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/2019-2020" target="_blank">．2019 - 2020</a></li>
+		    <!--<li><a href="http://web.tkpss.edu.hk/gallery/2018-2019" target="_blank">．2018 - 2019</a></li>
+		    <li><a href="http://web.tkpss.edu.hk/gallery/2017-2018" target="_blank">．2017 - 2018</a></li>
+		    <li><a href="http://web.tkpss.edu.hk/gallery/2016-2017" target="_blank">．2016 - 2017</a></li>
+		    <li><a href="http://web.tkpss.edu.hk/gallery/2015-2016" target="_blank">．2015 - 2016</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/2014-2015" target="_blank">．2014 - 2015</a></li>
+			<li><a href="http://web.tkpss.edu.hk/gallery/2013-2014" target="_blank">．2013 - 2014</a></li>
+			<li><a href="http://web.tkpss.edu.hk/gallery/2012-2013" target="_blank">．2012 - 2013</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/2011-2012" target="_blank">．2011 - 2012</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/2010-2011" target="_blank">．2010 - 2011</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/2009-2010" target="_blank">．2009 - 2010</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/2008-2009" target="_blank">．2008 - 2009</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/album183" target="_blank">．2007 - 2008</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/album39" target="_blank">．2005 - 2006</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/album48" target="_blank">．2004 - 2005</a></li>
+            <li><a href="http://web.tkpss.edu.hk/gallery/album47" target="_blank">．2003 - 2004</a></li>-->
+          </ul><div class="clearfloat"></div>
+	  </li>
+      <li><a href="#">．Links</a>
+          <ul class="m_links">
+            <li><a href="http://www.tinkaping.org/" target="_blank">．Tin Ka Ping Foundation</a></li>
+            <li><a href="https://tkpss.sams.edu.hk/" target="_blank">．WebSAMS</a></li>
+            <li><a href="http://eclass.tkpss.edu.hk/" target="_blank">．eClass</a></li>
+            <li><a href="http://library.tkpss.edu.hk/Pages/Index.aspx" target="_blank">．Library Master</a></li>
+            <li><a href="http://ndtkpss.wisenews.net/?gid=ndtkpss&user=ipaccess" target="_blank">．WISE News</a></li>
+            <li><a href="http://tvnews.hkedcity.net/" target="_blank">．TV News</a></li>
+            <li><a href="https://www.hkdse.hkeaa.edu.hk/" target="_blank">．HKDSE (HKEAA)</a></li>
+            <li><a href="http://www.bca.hkeaa.edu.hk/" target="_blank">．Basic Competency Assessments</a></li>
+            <li><a href="http://www.edb.gov.hk/" target="_blank">．Education Bureau</a></li>
+            <li><a href="http://www.hkeaa.edu.hk/" target="_blank">．Examinations and Assessment Authority</a></li>
+            <li><a href="https://eservices.edb.gov.hk/" target="_blank">．E-Services</a></li>
+          </ul><div class="clearfloat"></div>
+	  </li>
+      <li><a href="lang.php?lang=CHT" class="m_lang">．中文版</a></li>
+    </ul>
+  <!-- end . --></div>
+  <div class="clearfloat"></div>
+  <div class="content1">
+  
+
+
+      <div class="newspic">
+        <h1>TKPSS Updates</h1>
+        <div id="newspic1">
+       
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album341"><img src="newspic/2024-2025/2025-01-08_pta/2.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album341" target="_blank">家教會美食班</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album340"><img src="newspic/2024-2025/2025-01-08_pta/1.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album340" target="_blank">家教會親子活動日</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album339"><img src="newspic/2024-2025/2025-01-06_ccpu/1.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album339" target="_blank">中華文化薪火相傳禮——獅頭紥作技藝</a></p>
+            </div>
+			
+			
+			
+			
+			
+			
+			
+						
+
+			
+			
+			
+			<br />
+			<br />
+			<br />
+		  </div> <!-- end #newspic1 -->
+		  
+          <div id="newspic2">
+            
+			
+			
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album338"><img src="newspic/2024-2025/2025-01-06_sltu/3.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album338" target="_blank">基礎領袖訓練</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album336"><img src="newspic/2024-2025/2025-01-06_sltu/1.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album336" target="_blank">中一生活紀律訓練營</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album337"><img src="newspic/2024-2025/2025-01-06_sltu/2.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album337" target="_blank">中一班會職員訓練</a></p>
+            </div>
+			<!--<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album331"><img src="newspic/2024-2025/2024-12-16_ccau/20241202_080126295_iOS.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album331" target="_blank">Blood Donation Day</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album327"><img src="newspic/2024-2025/2024-12-16_ccau/DSC08619.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album327" target="_blank">Principal-Students Forum </a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album311"><img src="newspic/2024-2025/2024-10-25_candlelight/18.jpg" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album311" target="_blank">2024-25 Candle light Project</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album300"><img src="newspic/2024-2025//2024-10-08_ccpu/HKMOA_1.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album300" target="_blank">中華文化藝術館之旅：尋香記＋中國書畫裝裱法</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album299" target="_blank"><img src="newspic/2024-2025/2024-09-13_ccpu/1.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album299" target="_blank">中華文化導賞：<br>田家炳基金會文物展</a></p>
+            </div>
+			<div>
+        		<a href="http://web.tkpss.edu.hk/gallery/album297" target="_blank"><img src="newspic/2023-2024/2024-04-30_ccpu/1.gif" width="142" height="80"></a>
+        		<p><a href="http://web.tkpss.edu.hk/gallery/album297" target="_blank">中華文化薪火相傳禮專題演講：<br>旗袍文化</a></p>
+            </div>-->
+			  
+			
+		  
+          </div><!-- end #newspic2 -->
+		  
+      <!-- end .newspic --></div>
+  <!-- end .content1 --></div>
+
+<!-- CHT tkpss20 popup -->
+
+<!--
+ <div id="popup20notice" title="二十周年校慶" style="display: none; background-image:url(010_about/010-900_20anniversary/popup_bg.png); text-align: center;">
+  <h3>二十周年校慶綜藝晚會及開放日之相關通告請點擊這裏瀏覽</h3>
+  <table width="100%" border="1" cellspacing="0" cellpadding="2">
+    <tr>
+      <td align="center"><strong>通告編號</strong></td>
+      <td align="center"><strong>事項</strong></td>
+      <td align="center"><strong>發出日期</strong></td>
+    </tr>
+    <tr>
+      <td align="center">13_104</td>
+      <td><a href="pop-up/2013-2014/2014-04-10_20notice/13_104.pdf" target="_blank">《二十周年校慶典禮及開放日安排》</a></td>
+      <td>4/4/2014</td>
+    </tr>
+    <tr>
+      <td align="center">1398</td>
+      <td><a href="pop-up/2013-2014/2014-04-10_20notice/1398.pdf" target="_blank">《二十周年校慶綜藝晚會及特別安排》</a></td>
+      <td>28/3/2014</td>
+    </tr>
+    <tr>
+      <td align="center">1383</td>
+      <td><a href="pop-up/2013-2014/2014-04-10_20notice/1383rev20140415.pdf" target="_blank">《有關校慶綜藝晚會練習及綵排》</a></td>
+      <td>10/4/2014</td>
+    </tr>
+  </table>
+</div>
+-->
+
+<!-- ENG popup -->
+
+
+<!--<div id="visit0108" title="取消8/1參觀活動" style="display: none; background-color: #d9f4ff; font-size: 14px; line-height: 16px;">
+	<p>原定8/1的校園參觀，因疫情不穩，在確保安全下，本校決定取消是次活動。本校網頁將不斷更新，家長及同學可從新增的「田中360導覽」及「中一宣介網頁」進一步認識田中。</p>
+</div>-->
+
+<div id="popupf1" title="TKPSS" style="display: none; background-color: #d9f4ff; font-size: 18px; text-align: center;">
+	<center><h1></h1></center>
+    <p style="font-size: 16px"><a href="https://tkpsshk.wpcomstaging.com/%e6%96%87%e4%bb%b6%e4%b8%8b%e8%bc%89/" target="_blank"><strong>2/1/25-16/1/25<br>申請中一自行分配學位</strong></a></p>
+    </div>
+
+<div id="popupf2" title="TKPSS" style="display: none; background-color: #d9f4ff; font-size: 16px; text-align: center;">
+	<p style="font-size: 16px"><a href="pop-up/2024-2025/2024-10-23_ccau/01.pdf" target="_blank"><strong>校友校董選舉流程</strong></a></p>
+    </div>
+
+
+<div id="popupf3"  style="display: none; background-color: #d9f4ff; font-size: 18px; text-align: center; color: #F59046;">
+	
+    <table  width="100%">
+	<td><a href="pop-up/2024-2025/2024-11-22_S1/card02.jpg" target="_blank"><strong>12月8日升中資訊日</strong><br></a><br>
+		<a href="pop-up/2024-2025/2024-11-22_S1/card02.jpg" target="_blank"><img src="pop-up/2024-2025/2024-11-22_S1/card01b.jpg" width="186"; height="186" border="0";><br></a></td>
+	<td>&nbsp;</td>
+	<!--<td align="left" valign="top" ><a href="pop-up/2023-2024/2024-04-19_news/1.pdf" target="_blank"><strong><span style="font-size: 18px; color: #F0771E;">重要聲明:提防有不法人士冒充本校教職員進行詐騙</span></strong></a></td>-->
+	</table>
+    </div>
+
+<div id="popupf4" title="TKPSS" style="display: none; background-color: #d9f4ff; font-size: 18px; text-align: center;">
+        <p style="font-size: 16px"><a href="pop-up/2024-2025/2024-10-23_ccau/02.pdf" target="_blank"><strong>校友重聚日</strong></a>
+</div>
+
+<!-- <div id="popupnew" title="TKPSS" style="display: none; background-color: #d9f4ff; font-size: 18px; text-align: left; color: #880000;">
+	<center><h1></h1></center>
+  <strong><p style="text-align: center; color: #000000; font-size: 24px;">2023–2024年度中一轉校(叩門)申請</p></strong>
+	<p style="color: #000000; font-size: 18px; " >歡迎申請者下載<a href="../v2/pop-up/2022-2023/2023-06-29_F1/F1.pdf" target="_blank" ><strong><u>《中一轉校申請表2023-24》</u></strong></a>及<a href="../v2/pop-up/2022-2023/2023-06-29_F1/ApplicationNotes.pdf" target="_blank" ><strong><u>《轉校申請須知2023-2024》</u></strong></a></p>
+	<p style="color: #000000; font-size: 18px; " >交表日期: 七月十一日(星期二)至七月十三日(星期四)<strong><u>交回本校校務處辦理</u></strong><br>(辦公時間為9:00am-4:00pm)</p>
+	<p style="color: #000000; font-size: 18px; " >紙本申請表，可於本日起，到<strong><u>本校校務處</u></strong>索取。</p>
+	<strong><p style="text-align: left">升中資訊日 <br>Information Day for Prospective S.1 Admission</p></strong>
+    <table width="550" border="0">
+    <tbody>
+    <tr>
+      <td align="center" valign="top"><p style="color: #000000; font-size: 18px; letter-spacing: 0.5px; line-height: 26px;"><span style="text-align: left">日期/Date：04.12.2022<br>
+	  時間/Time：09:00am-10:30am<br>
+	  地點/Venue：本校禮堂 School Hall<br>
+	  電話聯絡/contact us at <u>2673&nbsp;1778</u><br><br>
+      <strong>直播連結：</strong><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;本地家長及學生：<a href="https://youtu.be/9yqUQCJETfc" target="_blank"> https://youtu.be/9yqUQCJETfc</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;內地家長及學生：會議編號/Meeting ID: <u>380 370 4482</u><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密碼/Passcode: <u>2673 1778</u></span></td>
+      截止報名日期：30/11 11:59pm</span></td>
+       <td align="center" valign="top"><span style="color: #000000; font-size: 16px;line-height: 26px;"><strong>報名方法：</strong></span></span><br>
+		<a href="https://tinyurl.com/nr5kxkcy" target="_blank"><img src="pop-up/2022-2023/2022-11-16_F1/QRCode.png" height="76"<br>
+		<a href="https://tinyurl.com/nr5kxkcy" target="_blank"><p style="color: #00008E; font-size: 9px;line-height: 24px;"><u>https://tinyurl.com/nr5kxkcy</u></td>
+    </tr>
+    </tbody>
+    </table>
+	<table width="550" border="0">
+    <tbody>
+    <tr>
+      <td align="left"><a href="pop-up/2022-2023/2022-11-16_F1/ApplicationNotes.pdf" target='_balnk'><img src="pop-up/2022-2023/2022-11-16_F1/ApplicationNotes.png" height="30"</a></td>
+      <td align="right"><a href="pop-up/2022-2023/2022-11-16_F1/ApplicationNotes_eng_1.pdf" target='_balnk'><img src="pop-up/2022-2023/2022-11-16_F1/F1_eng.png" height="30"</a></td>
+    </tr>
+    </tbody>
+    </table>
+<table width="550" border="0">
+    <tbody>
+	 <tr>
+      <td align="left"><a href="pop-up/2022-2023/2022-11-16_F1/F1.pdf" target='_balnk'><img src="pop-up/2022-2023/2022-11-16_F1/F1.png" height="30"</a></td>
+      <td align="right"><a href="pop-up/2022-2023/2022-11-16_F1/F1_eng.pdf" target='_balnk'><img src="pop-up/2022-2023/2022-11-16_F1/ApplicationNotes_eng.png" height="30"</a></td>
+    </tr>
+    </tbody>
+  </table>-->
+	<!--<p><a href="pop-up/2022-2023/2022-11-16_F1/ApplicationNotes.pdf" target="_blank"><strong>中一自行分配學位申請表</strong></a></p>
+    <p><a href="pop-up/2022-2023/2022-11-16_F1/F1.pdf" target="_blank"><strong>申請須知</strong></a></p>
+  <p style="font-size: 14px"></p>
+</div>-->
+		
+
+<script>
+$(function() {
+	//$( "#examcbs" ).dialog({ width: 260, height: 90, position: { my: "left", at: "center-300 top+245", of: window } });    
+	//$( "#visit0108" ).dialog({ width: 260, height: 170, position: { my: "left", at: "center-300 top+390", of: window } });   
+	//$( "#popupf1" ).dialog({ width: 360, height: 180, position: { my: "left", at: "center+122 top+280", of: window } });
+	//$( "#popupf1" ).dialog({ width: 200, height: 150, position: { my: "left", at: "center+282 top+265", of: window } });
+    //$( "#popupf3" ).dialog({ width: 250, height: 310, position: { my: "left", at: "center+232 top+345", of: window } });
+	//$( "#popupf4" ).dialog({ width: 177, height: 110, position: { my: "left", at: "center+306 top+244", of: window } });
+	//$( "#popupnew" ).dialog({ width: 689, height: 300, position: { my: "left", at: "center-485 top+340", of: window } });
+	
+});
+
+function MM_findObj(n, d) { //v4.01
+	  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+		d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+	  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+	  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+	  if(!x && d.getElementById) x=d.getElementById(n); return x;
+	}
+
+	function MM_swapImage() { //v3.0
+	  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+	   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+	}
+</script>
+<!-- End CHT popup -->
+
+  <div class="content2">
+    <div class="content2a">
+
+          <script src="js/jssor.slider-22.2.16.min.js" type="text/javascript"></script>
+
+    <script>
+        jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:3000,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 2500,
+              $SlideDuration: 1000,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+						function SliderClickEventHandler(slideIndex, event) {
+								$( "#tinPopup" ).dialog({
+										width: 850,
+										height:580,
+										position: {
+											my: "center",
+											at: "center top+400",
+											of: window
+										}
+								});
+        		}
+
+        		jssor_1_slider.$On($JssorSlider$.$EVT_CLICK, SliderClickEventHandler);
+        };
+    </script>
+    <style>
+
+        /* jssor slider arrow navigator skin 03 css */
+        /*
+        .jssora03l                  (normal)
+        .jssora03r                  (normal)
+        .jssora03l:hover            (normal mouseover)
+        .jssora03r:hover            (normal mouseover)
+        .jssora03l.jssora03ldn      (mousedown)
+        .jssora03r.jssora03rdn      (mousedown)
+        */
+        .jssora03l, .jssora03r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('/theme/img/a03.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora03l { background-position: -3px -33px; }
+        .jssora03r { background-position: -63px -33px; }
+        .jssora03l:hover { background-position: -123px -33px; }
+        .jssora03r:hover { background-position: -183px -33px; }
+        .jssora03l.jssora03ldn { background-position: -243px -33px; }
+        .jssora03r.jssora03rdn { background-position: -303px -33px; }
+    </style>
+
+ <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 480px; height: 270px; overflow: hidden; visibility: hidden; background-color: #A6E2FF; layer-background-color: #A6E2FF; padding:8px; border-radius: 8px;">
+        <div data-u="slides" style="cursor: default; position: relative; top: 8px; left: 60px; width: 360px; height: 270px; overflow: hidden;">
+
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_239.jpg" />
+        </div>
+		
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_238.jpg" />
+        </div>
+		
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_237.JPG" />
+        </div>
+		
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_236.JPG" />
+        </div>
+		
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_235.JPG" />
+        </div>
+		
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_234.JPG" />
+        </div>
+		
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_233.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_232.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_231.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_230.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_229.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_228.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_227.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_226.JPG" />
+        </div>
+			
+	    <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_225.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_224.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_223.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_222.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_221.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_220.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_219.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_218.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_216.jpg" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_217.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_215.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_214.jpg" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_213.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_212.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_211.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_210.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_209.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_208.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_207_e.png" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_206_e.png" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_205_e.png" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_204.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_203.JPG" />
+        </div>
+		
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_202.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_201.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_200.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_199.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_198.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_197.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_196.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_195.JPG" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_194.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_193.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_192.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_191.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_190.jpg" />
+        </div>
+			
+		<div data-p="112.50" style="display: none;">
+                <img data-u="image" src="_images/awards/awards_189.jpg" />
+        </div>
+			
+		
+
+      </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    </div>
+      <script>
+        jssor_1_slider_init();
+    </script>
+
+      <!-- #endregion Jssor Slider End -->
+
+      <div class="msgpad">
+        <table border="0" align="center" >
+         <tr>
+         
+          <td>
+           <a href="https://tkpsshk.wpcomstaging.com/" target="_blank">
+           <img src="010_about/010-170_promotion/e-icon_final.gif" alt="" width="250" height="175" border="0" ></a>
+          </td>
+          
+          <td>
+			<a href="http://wp.tkpss.edu.hk/tkpss30/" target="_blank">
+			<img src="../v2/_images/30years_5_Eng.png" width="250" height="175" border="0" /></a>
+		  </td>
+        
+		  <td>
+			<a href="https://tkpsshk.sharepoint.com/sites/SDLRoom" target="_blank">
+		    <img src="../v2/_images/SharePoint4.png" width="250" height="175" border="0" /></a>
+		  </td>
+		</tr>
+
+		  </tr>
+        </table>
+      <!-- end .msgpad --></div>
+    <!-- end .content2a --></div>
+    <div class="content2b">
+      <div class="wisesayings" id="wisesayings">
+        <div class="wisemsg">
+      	  <marquee scrollamount="1" scrolldelay="80" direction="up" height="85" onMouseOver="this.stop()" onMouseOut="this.start()">
+        	<p>Shoot for the moon. Even if you miss, you'll land among the stars.</p>
+			<p>Nothing is impossible to a willing heart.</p>
+			<p>If you can dream it, you can do it.</p>
+			<p>If you can imagine it, you can achieve it; if you can dream it, you can become it.</p>
+			<p>Hope sees the invisible, feels the intangible and achieves the impossible.</p>
+			<p>Your future depends on many things, but mostly on you.</p>
+			<p>To succeed, we must first believe that we can.</p>
+			<p>Speaking without thinking is shooting without aiming.</p>
+			<p>Without goals, and plans to reach them, you are like a ship that has set sail with no destination.</p>
+			<p>Knowledge is power.</p>
+			<p>Teachers open the door, but you must enter by yourself.</p>
+			<p>Doubt is the beginning, not the end. of wisdom.</p>
+			<p>Logical reasoning brings you from A to B. Imagination brings you everywhere.</p>
+			<p>The power of imagination makes us infinite.</p>
+			<p>The man who does not read has no advantage over the man who cannot read.</p>
+			<p>Politeness costs nothing and gains everything.</p>
+			<p>Discipline is the bridge between goals and accomplishments.</p>
+			<p>A heart filled with anger has no room for love.</p>
+			<p>Wisdom in the mind is better than money in the hand.</p>
+			<p>Good friends are like stars, you don't always see them but you know they're always there.</p>
+			<p>The good life is one inspired by love and guided by knowledge.</p>
+			<p>Love is the only force capable of transforming an enemy to a friend.</p>
+			<p>In this life we cannot always do great things. But we can do small things with great love.</p>
+			<p>The best and most beautiful things in life cannot be seen, not touched, but are felt in the heart.</p>
+			<p>Great minds discuss ideas; average minds discuss events; small minds discuss people.</p>
+			<p>Leadership is the special quality which enables people to stand up and pull the rest of us over the horizon.</p>
+			<p>Love cures people – both the ones who give it and the ones who receive it.</p>
+			<p>When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.</p>
+			<p>Storms make trees take deeper roots.</p>
+          </marquee>
+        </div>
+      <!-- end .wisesayings --></div>
+      <div class="iconpad">
+        <div class="icon"><a href="http://www.tinkaping.org/" target="_blank"><img src="_images/main_founder.gif" width="70" height="70" alt="Icon"></a></div>
+        <div class="icon"><a href="http://eclass.tkpss.edu.hk/" target="_blank"><img src="_images/main_eclass.gif" width="70" height="70" alt="Icon"></a></div>
+        <!--<div class="icon"><a href="010_about/010-150_circulars/010-150_circulars-login.php"><img src="_images/main_notices.png" width="70" height="70" alt="Icon"></a></div>-->
+        <div class="icon"><a href="020_organisation/020-081_reading/index.htm" target="_blank"><img src="_images/main_reading.gif" width="70" height="70" alt="Icon"></a></div>
+		
+		<div class="icon"><a href="020_organisation/020-180_pta/index.htm" target="_blank"><img src="_images/main_parent.gif" width="70" height="70" alt="Icon"></a></div>
+        <div class="icon"><a href="040_publications/040-070_writing/index.html" target="_blank"><img src="_images/main_writing.gif" width="70" height="70" alt="Icon"></a></div>
+        <div class="icon"><a href="010_about/010-200_drtin/010-200_drtin.php"><img src="_images/tkp.png" width="70" height="70" alt="Icon"></a></div>
+		  
+        <div class="icon"><a href="pop-up/2023-2024/2024-08-15_rules/2024_f1-news-login.php"><img src="_images/main_student.png" width="70" height="70" alt="Icon"></a></div>
+        <div class="icon"><a href="010_about/010-080_curriculum/010-080_curriculum.php" ><img src="_images/main_subject.gif" width="70" height="70" alt="Icon"></a></div>
+        <div class="icon"><a href="https://parents.eclass.com.hk/" target="_blank"><img src="_images/eclass_ENG_s.png" width="70" height="70" alt="Icon"></a></div><!--大eclass：width230，height86-->
+		  
+      <!-- end .iconpad --></div>
+    <!-- end .content2b --></div>
+
+  <!-- end .content2 --></div>
+
+
+	  <div class="clearfloat"></div>
+  <div class="footer">
+    <div class="addr">
+      <table width="778" border="0" cellpadding="5" cellspacing="0">
+        <tr>
+          <td width="357">Address:</td>
+          <td width="125">Fax: 2673 7730</td>
+          <td width="266">E-mail: tkpss@web.tkpss.edu.hk</td>
+        </tr>
+        <tr>
+          <td>No.1, Wai Hon Road, Fanling, N.T.,H.K <a href="http://maps.google.com.hk/?ie=UTF8&amp;brcurrent=3,0x3403f61813d21111:0x665e677adb9d071d,1,0x3403f5db5f172d93:0xe20b08e8053ec4d8&amp;ll=22.494735,114.131684&amp;spn=0.004758,0.006866&amp;z=17&amp;source=embed" target="_blank"><img src="_images/maps.gif" width="50" height="12" alt="Maps"></a></td>
+          <td>Tel: 2673 1778</td>
+          <td>eClass: http://eclass.tkpss.edu.hk/</td>
+        </tr>
+      </table>
+    </div>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+</body>
+</html>
